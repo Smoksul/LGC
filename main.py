@@ -18,4 +18,3 @@ for rlnbr in range(1,128):
     rule=rul.rules(rlnbr)
     cell.evolve(A, N, M, rule)
     plm.plot(A,rlnbr)
-
