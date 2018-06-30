@@ -1,3 +1,5 @@
+import numpy
+
 def cut(rlchoice, linechoice):
     fname="../out/out_"+str(rlchoice)+".dat"
     file=open(fname)
@@ -27,6 +29,9 @@ def findbg(row):
                 break
         if tr==1:
             return reduce(row, 0, iter+1)
-
-
-
+#def reduce(A, M, N, lg, BG):
+#    lenght=512-512%len(BG)
+#    B=numpy.zeros((lenght, 512), dtype='i')
+#    for iter in range(0,512)
+#        for iter1 in range(0, lenght)
+#            B
