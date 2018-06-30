@@ -8,8 +8,8 @@ M=6 #liczba wierszy
 N=5 #liczba kolumn
 
 
-for i in range(0, M-2): #właściwa pętla dopisująca kolejny wiersz
-		for j in range(0, N-1): # i numeruje wiersze, j kolumny
+for i in range(0, M-1): #właściwa pętla dopisująca kolejny wiersz
+		for j in range(0, N): # i numeruje wiersze, j kolumny
 			if(j == 0):
 				A[i+1][j] = gen(0, A[i][j], A[i][j+1])
 			elif(j == N-1):
