@@ -3,9 +3,9 @@ import numpy
 def gen(a, b, c): #funkcja generujaca wynik na podstawie sasiadow
 	return b
 
-A = numpy.array([[1, 0, 1, 0, 0]]) #jakas przykladowa macierz MxN
-M=6 #liczba wierszy ktore beda PO wykonaniu petli
-N=5 #liczba kolumn
+A = numpy.array([[1, 0, 1, 0, 0, 0, 1, 0, 1, 1]]) #jakas przykladowa macierz MxN
+M=30 #liczba wierszy ktore beda PO wykonaniu petli
+N=10 #liczba kolumn
 
 
 for i in range(0, M-1): #wlasciwa petla dopisujaca kolejny wiersz
