@@ -11,4 +11,3 @@ def put(BG, GL):
         vec[k] = GL[i]
         k+=1
     return vec
-    
