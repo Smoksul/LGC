@@ -4,6 +4,7 @@ matplotlib.use('pdf')
 import matplotlib.pyplot as plt
 import random
 
+
 def rules(): #pobiera zasade
 	rulenbr=0
 	tempstr=""
@@ -43,6 +44,7 @@ def gen(a, b, c, rule): #funkcja generujaca wynik na podstawie sasiadow
 			else:
 				return int(rule[7])
 
+
 M=1024 #liczba wierszy
 N=256 #liczba kolumn
 A = numpy.zeros((M,N), dtype='i') #macierz MxN inicjowana zerami
@@ -50,6 +52,7 @@ A = numpy.zeros((M,N), dtype='i') #macierz MxN inicjowana zerami
 random.seed()
 for i in range (0,N):
 	A[0][i]=random.randint(0,1)
+
 
 
 rule=rules()
