@@ -16,6 +16,7 @@
 
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#  Byłem tu
 
 import numpy
 import pylab
@@ -40,7 +41,7 @@ class GameOfLife:
        #        self.old_grid[i][j] = 1
        #     else:
                self.old_grid[i][j] = 0
-      
+
    def live_neighbours(self, i, j):
       """ Count the number of live neighbours around point (i, j). """
       s = 0 # The total number of live neighbours.
