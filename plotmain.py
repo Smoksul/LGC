@@ -1,7 +1,9 @@
 import matplotlib
+import numpy
 matplotlib.use('pdf')
 import matplotlib.pyplot as plt
 
-def plot(A):
+def plot(A,rlnbr):
     plt.matshow(A)
-    plt.savefig("glider.png")
+    numpy.savetxt("../out/out_"+str(rlnbr)+".dat", A, fmt = '%i')
+    plt.savefig("../out/out_"+str(rlnbr)+".png")
