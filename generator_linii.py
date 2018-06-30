@@ -2,47 +2,45 @@ import numpy
 import matplotlib.pylab as plt
 
 
+
 def rules(): #pobiera zasade
 	rulenbr=0
 	tempstr=""
 	rulenbr=input('Wpisz numer zasady: ')
 	while (rulenbr<1) and (rulenbr>255) :
 		rulenbr=input('Wpisz numer zasady: ') #idiotouodparnianie
-	file=open('/rules.dat', 'w+') #otwiera plik z zasadami
+	file=open('./rules.dat', 'r') #otwiera plik z zasadami
 	helpiter=1
-	for line in file:	#iteracja po liniach
+	for helpiter in range(1,257):	#iteracja po liniach
+		line=file.readline()
 		if helpiter==rulenbr:
-			for iter1 in range (0,len(line)): #iteracja po wyrazach linii
-				while line[iter1]!=',':
-					tempstr=tempstr+line[iter1]
-				return tempstr
-		helpiter+=1
-
-
+			for iter1 in range(0, 8):
+				tempstr=tempstr+line[iter1]
+			return tempstr
 
 def gen(a, b, c, rule): #funkcja generujaca wynik na podstawie sasiadow
 	if a:
 		if b:
 			if c:
-				return int(rule[1])
+				return int(rule[0])
 			else:
-				return int(rule[2])
+				return int(rule[1])
 		else:
 			if c:
-				return int(rule[3])
+				return int(rule[2])
 			else:
-				return int(rule[4])
+				return int(rule[3])
 	else:
 		if b:
 			if c:
-				return int(rule[5])
+				return int(rule[4])
 			else:
-				return int(rule[6])
+				return int(rule[5])
 		else:
 			if c:
-				return int(rule[7])
+				return int(rule[6])
 			else:
-				return int(rule[8])
+				return int(rule[7])
 
 
 A = numpy.array([[1, 0, 1, 0, 0, 0, 1, 0, 1, 1]]) #jakas przykladowa macierz MxN
