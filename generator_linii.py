@@ -3,7 +3,7 @@ import numpy
 def gen(a, b, c): #funkcja generujaca wynik na podstawie sasiadow
 	return b
 
-A = numpy.array([[1, 0, 1, 0, 0], [0, 0, 0, 0, 1], [0, 0, 2, 0, 0], [0, 0, 0, 0, 0], [1, 1, 1, 1, 1], [0, 0, 0, 0, 0]]) #jakas przykladowa macierz MxN
+A = numpy.array([[1, 0, 1, 0, 0]]) #jakas przykladowa macierz MxN
 M=6 #liczba wierszy ktore beda PO wykonaniu petli
 N=5 #liczba kolumn
 
