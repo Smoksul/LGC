@@ -45,6 +45,7 @@ def gen(a, b, c, rule): #funkcja generujaca wynik na podstawie sasiadow
 				return int(rule[8])
 
 
+
 A = numpy.array([[1, 0, 1, 0, 0, 0, 1, 0, 1, 1]]) #jakas przykladowa macierz MxN
 M=30 #liczba wierszy ktore beda PO wykonaniu petli
 N=10 #liczba kolumn

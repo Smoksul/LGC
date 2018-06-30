@@ -14,12 +14,6 @@ for x in range(0, M):
 
 #labels = range(0,N)
 #plt.xticks(labels)
-plt.matshow(A, cmap=plt.cm.gray)
-
-
-
-
-#plt.imshow(A)
-
-#plt.show()
-plt.savefig('foo.pdf')
+plt.matshow(A)
+plt.imshow(A)
+plt.show()
