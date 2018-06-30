@@ -21,4 +21,5 @@ plt.matshow(A, cmap=plt.cm.gray)
 
 #plt.imshow(A)
 
-plt.show()
+#plt.show()
+plt.savefig('foo.pdf')
