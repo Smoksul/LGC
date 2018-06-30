@@ -17,3 +17,16 @@ def reduce(row, beg, end):
     for i in range(beg,end):
         result += row[i]
     return result
+
+def findbg(row):
+    for iter in range(3, len(row)):
+        tr=1
+        for iter2 in range(0, iter):
+            if row[0+iter2]!=row[iter+iter2]:
+                tr=0
+                break
+        if tr==1:
+            return reduce(row, 0, iter+1)
+
+
+
