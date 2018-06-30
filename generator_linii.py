@@ -60,3 +60,5 @@ for i in range(0, M-1): #wlasciwa petla dopisujaca kolejny wiersz
 			else:
 				A[i+1][j] = gen(A[i][j-1], A[i][j], A[i][j+1], rule)
 
+plt.matshow(A, cmap=plt.cm.gray)
+plt.show()

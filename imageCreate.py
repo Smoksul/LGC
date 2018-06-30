@@ -1,20 +1,24 @@
-import matplotlib.pylab as plt
 import numpy
 import random
+import matplotlib.pylab as plt
 
-N = 720
 
-a = numpy.zeros(N*N, dtype = 'i').reshape(N,N)
+M=50 #liczba wierszy ktore beda PO wykonaniu petli
+N=100 #liczba kolumn
 
-for x in range(0, N):
+A = numpy.zeros(N*M, dtype='i').reshape(M,N)
+
+for x in range(0, M):
     for y in range(0, N):
-        a[x][y] = random.randint(0,1)
+        A[x][y] = random.randint(0,1)
 
-labels = range(0, N)
+#labels = range(0,N)
+#plt.xticks(labels)
+plt.matshow(A, cmap=plt.cm.gray)
 
 
-fig = plt.figure()
-plt.xticks(labels)
-plt.imshow(a)
+
+
+#plt.imshow(A)
 
 plt.show()
