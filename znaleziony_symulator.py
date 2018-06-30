@@ -37,9 +37,9 @@ class GameOfLife:
       # Set up a random initial configuration for the grid.
       for i in range(0, self.N):
          for j in range(0, self.N):
-       #     if(random.randint(0, 100) < 15):
-       #        self.old_grid[i][j] = 1
-       #     else:
+          if(random.randint(0, 100) < 15):
+               self.old_grid[i][j] = 1
+          else:
                self.old_grid[i][j] = 0
 
    def live_neighbours(self, i, j):
