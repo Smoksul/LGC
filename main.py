@@ -7,6 +7,7 @@ import randvec as rd
 import cellmain as cell
 import rulesmain as rul
 import plotmain as plm
+import cut
 
 M=512#liczba wierszy
 N=256 #liczba kolumn
@@ -19,3 +20,5 @@ for rlnbr in range(1,128):
     rule=rul.rules(rlnbr)
     cell.evolve(A, N, M, rule)
     plm.plot(A,rlnbr)
+    print(cut.cut(A, 111, 350))
+
