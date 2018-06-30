@@ -8,6 +8,7 @@ import cellmain as cell
 import rulesmain as rul
 import plotmain as plm
 import cut
+import glider
 
 M=512#liczba wierszy
 N=256 #liczba kolumn
