@@ -42,12 +42,17 @@ def gen(a, b, c, rule): #funkcja generujaca wynik na podstawie sasiadow
 			else:
 				return int(rule[7])
 
-M=10 #liczba wierszy ktore beda PO wykonaniu petli
-N=10 #liczba kolumn
-A = numpy.zeros((M,N), dtype='i') #jakas przykladowa macierz MxN
+M=1024 #liczba wierszy
+N=256 #liczba kolumn
+A = numpy.zeros((M,N), dtype='i') #macierz MxN inicjowana zerami
+
+seed()
+for i in range (0,N):
+	A[0][i]=randint(0,1)
+
 
 rule=rules()
-A[0][3] = 1
+
 print A
 for i in range(0, M-1): #wlasciwa petla dopisujaca kolejny wiersz
 		for j in range(0, N): # i numeruje wiersze, j kolumny
