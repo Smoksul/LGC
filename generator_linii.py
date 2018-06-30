@@ -1,4 +1,5 @@
 import numpy
+import matplotlib.pylab as plt
 
 def gen(a, b, c): #funkcja generujaca wynik na podstawie sasiadow
 	return b
@@ -17,3 +18,8 @@ for i in range(0, M-1): #wlasciwa petla dopisujaca kolejny wiersz
 				A[i+1][j] = A[i][j]
 			else:
 				A[i+1][j] = gen(A[i][j-1], A[i][j], A[i][j+1])
+
+fig = plt.figure()
+plt.imshow(A)
+
+plt.show()
