@@ -11,3 +11,9 @@ def cut(rlchoice, linechoice):
         if line[iter1]!=' ':
             refline=refline+line[iter1]
     return refline
+
+def reduce(row, beg, end):
+    result = ""
+    for i in range(beg,end):
+        result += row[i]
+    return result
