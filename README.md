@@ -1,2 +1,0 @@
-# LGC
-Large Glider Collider
