@@ -1,6 +1,8 @@
 import numpy
-import matplotlib.pylab as plt
-
+import matplotlib
+matplotlib.use('pdf')
+import matplotlib.pyplot as plt
+import random
 
 
 def rules(): #pobiera zasade
@@ -42,13 +44,15 @@ def gen(a, b, c, rule): #funkcja generujaca wynik na podstawie sasiadow
 			else:
 				return int(rule[7])
 
+
 M=1024 #liczba wierszy
 N=256 #liczba kolumn
 A = numpy.zeros((M,N), dtype='i') #macierz MxN inicjowana zerami
 
-seed()
+random.seed()
 for i in range (0,N):
-	A[0][i]=randint(0,1)
+	A[0][i]=random.randint(0,1)
+
 
 
 rule=rules()
@@ -62,8 +66,6 @@ for i in range(0, M-1): #wlasciwa petla dopisujaca kolejny wiersz
 				A[i+1][j] = A[i][j]
 			else:
 				A[i+1][j] = gen(A[i][j-1], A[i][j], A[i][j+1], rule)
-print ("")
-print A
+
 plt.matshow(A)
-#plt.imshow(A)
-plt.show()
+plt.savefig("glider.png")
