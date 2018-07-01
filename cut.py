@@ -28,7 +28,7 @@ def findbg(row):
                 tr=0
                 break
         if tr==1:
-            return reduce(row, 0, iter+1)
+            return reduce(row, 0, iter)
 #def reduce(A, M, N, lg, BG):
 #    lenght=512-512%len(BG)
 #    B=numpy.zeros((lenght, 512), dtype='i')
